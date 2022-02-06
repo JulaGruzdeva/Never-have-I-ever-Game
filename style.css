@@ -25,11 +25,11 @@ body{
     margin-top: 0;
 }
 .card__div{
-    
+    align-items: center;
     margin: auto;
-    margin-top: 50px;
+    /* margin-top: 50px; */
     width: 260px;
-    /* min-height: 140px; */
+    min-height: 140px;
     height: fit-content;
     /* border: 1px solid whitesmoke; */
     border-radius: 10px;
@@ -37,12 +37,14 @@ body{
     color: #EF8C86;
 }
 .card__paragraph{
+    width: 200px;
+    margin-left:33px ;
     font-style: normal;
     font-weight: 200px;
     font-size: 22px;
     line-height: 35px;
-    margin-left: 15px;
-    text-align: center;
+    /* margin-left: 15px; */
+    /* text-align: center; */
 }
 
 .button__div{

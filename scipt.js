@@ -26,20 +26,44 @@ const objCard = {
     'Eaten from someone else\'s plate when they weren\'t looking':'Ел с чьей-либо тарелки, пока тот не видел',
     
 }
+let flag = true;
 
 
 btnNext.addEventListener('click', nextFrase);
+translateBtn.addEventListener('click', (e)=>{
 
-function nextFrase(){
-    let english = Object.keys(objCard);
-    let englishGen = english[Math.floor(Math.random()*english.length)];
-    cardText.innerHTML = englishGen;
+    // console.log(e.target);
+    if(flag){
+        flag = false;
+    }else{
+        flag = true
+    }
+    console.log(flag);
     
 
-    let russian = objCard[englishGen];
-    translateBtn.addEventListener('click', ()=>{
-        cardText.innerHTML = russian;
+});
+function nextFrase(){
+        let english = Object.keys(objCard);
+        let englishGen = english[Math.floor(Math.random()*english.length)];
 
-    });
+        let russian = Object.values(objCard);
+        let russianhGen = russian[Math.floor(Math.random()*russian.length)];
+
+    if(flag){
+        cardText.innerHTML = englishGen;
+    }else{
+        cardText.innerHTML = russianhGen;
+    }
+
+    
+
+    // let russian = objCard[englishGen];
+    // translateBtn.addEventListener('click', (e)=>{
+
+    //     console.log(e.target);
+    //     flag == false;
+        
+
+    // });
    
 }
